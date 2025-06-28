@@ -16,29 +16,19 @@ Let's have a look what persent inside the `src` folder.
 - Make sure to create `config.json` inside `src/config` folder
 - `config.json` -> contains the information related to the database setup related to different environments for e.g. development, test, production etc. Make sure to provide username and password with correct host for e.g. in dev environment we are going to use the local host i.e. `127.0.0.1` with correct dialect means the database you are going to use in my case i.e. `mysql`
 
+- First step is to run this command
 ```
-{
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
+  npm install
+```
 
+- go inside the `src/` folder and run this command
+- this will provide you `migrations` andd `seeders` folder along witth `src/config/config.json` file.
+
+```
+  npx sequelize init
+```
+
+- To run the project
+```
+  npm run dev
 ```
